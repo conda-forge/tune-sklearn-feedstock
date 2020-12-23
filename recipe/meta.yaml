@@ -1,5 +1,5 @@
 {% set name = "tune-sklearn" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -9,12 +9,12 @@ source:
   # NOTE: pypi doesnt contain a source package for it. See
   # https://github.com/ray-project/tune-sklearn/issues/159
   url: https://github.com/ray-project/tune-sklearn/archive/v{{ version }}.tar.gz
-  sha256: 436cc5fa37d9cb596ce8a841b1c20120564d012114ebefd024aebdac753ce5f3
+  sha256: 04a6076b6258ba0657e66d5f1c0b93994f472c63afc425d6f80618b827ebe333
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -38,7 +38,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'A drop-in replacement for Scikit-Learn’s GridSearchCV / RandomizedSearchCV -- but with cutting edge hyperparameter tuning techniques.'
+  summary: A drop-in replacement for Scikit-Learn’s GridSearchCV / RandomizedSearchCV -- but with cutting edge hyperparameter tuning techniques.
 
 extra:
   recipe-maintainers:
