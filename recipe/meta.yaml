@@ -1,5 +1,5 @@
 {% set name = "tune-sklearn" %}
-{% set version = "0.2.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ source:
   # NOTE: pypi doesnt contain a source package for it. See
   # https://github.com/ray-project/tune-sklearn/issues/159
   url: https://github.com/ray-project/tune-sklearn/archive/v{{ version }}.tar.gz
-  sha256: 04a6076b6258ba0657e66d5f1c0b93994f472c63afc425d6f80618b827ebe333
+  sha256: 1413386a6960bbaa53934a401966097db849899046f4042fb65c3ec04c517cf5
 
 build:
   noarch: python
