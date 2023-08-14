@@ -1,5 +1,5 @@
 {% set name = "tune-sklearn" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ source:
   # NOTE: pypi doesnt contain a source package for it. See
   # https://github.com/ray-project/tune-sklearn/issues/159
   url: https://github.com/ray-project/tune-sklearn/archive/v{{ version }}.tar.gz
-  sha256: 8a42e3b4ead768a18a83edb137f00df175abd051fb03b8809b7b66de42d18108
+  sha256: f6d531f99a02de4a420cbefb96de64c8db4a014f2c7352f38a6a7a37e2103614
 
 build:
   noarch: python
@@ -23,13 +23,10 @@ requirements:
     - setuptools
   run:
     - python >=3.6
-    - ray-tune >=1.0.1
-    - ray-core >=1.0.1
-    - pandas
+    - ray-tune >=2.0.0
     - numpy >=1.16
     - scipy
-    - scikit-learn >=0.23
-    - scikit-optimize
+    - scikit-learn
 
 test:
   imports:
@@ -45,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - hadim
+    - DManowitz
