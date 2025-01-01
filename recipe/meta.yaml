@@ -13,22 +13,24 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - ray-tune >=2.0.0
     - numpy >=1.16
     - scipy
     - scikit-learn
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - tune_sklearn
 
