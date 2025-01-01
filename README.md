@@ -7,7 +7,7 @@ Home: https://github.com/ray-project/tune-sklearn
 
 Package license: Apache-2.0
 
-Summary: A drop-in replacement for Scikit-Learn’s GridSearchCV / RandomizedSearchCV -- but with cutting edge hyperparameter tuning techniques.
+Summary: A drop-in replacement for Scikit-Learn's GridSearchCV / RandomizedSearchCV -- but with cutting edge hyperparameter tuning techniques.
 
 Current build status
 ====================
