@@ -28,7 +28,9 @@ requirements:
     - numpy >=1.16
     - scipy
     - scikit-learn
-    - pkg_resources
+    # Something above imports
+    # from pkg_resources._vendor.packaging.version import parse as parse_version
+    - setuptools <71
 
 tests:
   - python:
