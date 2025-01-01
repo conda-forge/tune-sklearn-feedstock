@@ -1,8 +1,7 @@
-{% set name = "tune-sklearn" %}
 {% set version = "0.5.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: tune-sklearn
   version: {{ version }}
 
 source:
@@ -13,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - ray-tune >=2.0.0
-    - ray>=2.7.1,<2.10.0
+    - ray >=2.7.1,<2.10.0
     - numpy >=1.16
     - scipy
     - scikit-learn
